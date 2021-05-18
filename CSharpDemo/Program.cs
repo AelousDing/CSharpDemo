@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpDemo.DesignPatterns.Create.Builder;
+using System;
 
 namespace CSharpDemo
 {
@@ -8,7 +9,10 @@ namespace CSharpDemo
         {
             //LinqWhereLoop.Run();
             //ClassNameChildren.Run();
-            FileDemo.Run();
+            //FileDemo.Run();
+            BuilderClient.Run();
+
+
             Console.ReadLine();
         }
     }
