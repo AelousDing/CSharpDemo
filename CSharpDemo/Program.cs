@@ -1,4 +1,5 @@
 ﻿using CSharpDemo.DesignPatterns.Create.Builder;
+using CSharpDemo.DesignPatterns.Structural.Adapter;
 using System;
 
 namespace CSharpDemo
@@ -10,7 +11,8 @@ namespace CSharpDemo
             //LinqWhereLoop.Run();
             //ClassNameChildren.Run();
             //FileDemo.Run();
-            BuilderClient.Run();
+            //BuilderClient.Run();
+            AdapterClient.Run();
 
 
             Console.ReadLine();
