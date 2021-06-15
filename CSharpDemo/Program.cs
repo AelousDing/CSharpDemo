@@ -12,8 +12,8 @@ namespace CSharpDemo
             //ClassNameChildren.Run();
             //FileDemo.Run();
             //BuilderClient.Run();
-            AdapterClient.Run();
-
+            //AdapterClient.Run();
+            FunctionParamDemo.Run();
 
             Console.ReadLine();
         }

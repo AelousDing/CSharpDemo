@@ -14,7 +14,7 @@ namespace CSharpDemo
         public static List<Student> GetStudents()
         {
             List<Student> students = new List<Student>();
-            for (int i = 0; i < 200000; i++)
+            for (int i = 0; i < 20; i++)
             {
                 students.Add(new Student
                 {
