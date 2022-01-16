@@ -1,5 +1,7 @@
 ﻿using CSharpDemo.DesignPatterns.Create.Builder;
 using CSharpDemo.DesignPatterns.Structural.Adapter;
+using CSharpDemo.Encrypt;
+using CSharpDemo.FileWatcher;
 using System;
 
 namespace CSharpDemo
@@ -13,8 +15,11 @@ namespace CSharpDemo
             //FileDemo.Run();
             //BuilderClient.Run();
             //AdapterClient.Run();
-            FunctionParamDemo.Run();
+            //FunctionParamDemo.Run();
+            //string s = Md5.MD5Encrypt32("123");
+            //Console.WriteLine(s);
 
+            FileListenerServerDemo.Run();
             Console.ReadLine();
         }
     }
