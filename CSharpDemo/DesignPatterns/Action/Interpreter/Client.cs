@@ -8,6 +8,7 @@ namespace CSharpDemo.DesignPatterns.Interpreter
     {
         public void Main()
         {
+
         }
     }
 }
