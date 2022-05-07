@@ -9,7 +9,7 @@ namespace CSharpDemo.DesignPatterns.Action.Memento_Pattern
         State state;
         public Memento CreateMemento()
         {
-            return new Memento();
+            return new Memento(state);
         }
         public void SetMemento(Memento memento)
         {

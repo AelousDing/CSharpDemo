@@ -6,6 +6,10 @@ namespace CSharpDemo.DesignPatterns.Action.Memento_Pattern
 {
     internal class Memento
     {
+        public Memento(State state)
+        {
+            this.state = state;
+        }
         State state;
         public State GetState()
         {
