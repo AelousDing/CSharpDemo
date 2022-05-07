@@ -6,6 +6,10 @@ namespace CSharpDemo.DesignPatterns.Action.Iterator_Pattern
 {
     internal class ConcreteIterator : Iterator<int>
     {
+        public ConcreteIterator(ConcreteAggeregate concreteAggeregate)
+        {
+
+        }
         public int Current()
         {
             throw new NotImplementedException();
