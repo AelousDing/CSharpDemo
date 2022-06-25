@@ -8,6 +8,7 @@ namespace CSharpDemo.Algorithm
 {
     public class MatrixPath
     {
+        #region 剑指offer 面试题12
         public bool HasPath(char[][] matrix, int rows, int colums, string str)
         {
             if (matrix == null || rows < 1 || colums < 1 || string.IsNullOrEmpty(str))
@@ -63,5 +64,58 @@ namespace CSharpDemo.Algorithm
             }
             return hasPath;
         }
+        #endregion
+
+        #region 剑指offer 面试题13
+        public int MovingCount(int threshold, int rows, int columns)
+        {
+            if (threshold < 0 || rows <= 0 || columns <= 0)
+            {
+                return 0;
+            }
+            bool[] visited = new bool[rows * columns];
+            for (int i = 0; i < visited.Length; i++)
+            {
+                visited[i] = false;
+            }
+            int count = MovingCountCore(threshold, rows, columns, 0, 0, visited);
+            return count;
+        }
+        private int MovingCountCore(int threshold, int rows, int columns, int row, int column, bool[] visited)
+        {
+            int count = 0;
+            if (Check(threshold, rows, columns, row, column, visited))
+            {
+                visited[row * columns + column] = true;
+                count = 1
+                    + MovingCountCore(threshold, rows, columns, row, column - 1, visited)
+                    + MovingCountCore(threshold, rows, columns, row - 1, column, visited)
+                    + MovingCountCore(threshold, rows, columns, row + 1, column, visited)
+                    + MovingCountCore(threshold, rows, columns, row, column + 1, visited);
+            }
+            return count;
+        }
+        private bool Check(int threshold, int rows, int columns, int row, int column, bool[] visited)
+        {
+            if (row >= 0 && row < rows
+                && column >= 0 && column < columns
+                && GetDigitSum(row) + GetDigitSum(column) <= threshold
+                && !visited[row * columns + column])
+            {
+                return true;
+            }
+            return false;
+        }
+        private int GetDigitSum(int number)
+        {
+            int sum = 0;
+            while (number > 0)
+            {
+                sum += number % 10;
+                number /= 10;
+            }
+            return sum;
+        }
+        #endregion
     }
 }
